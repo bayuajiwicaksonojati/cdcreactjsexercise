@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import { TodoProvider } from './contexts/TodoContext';
 import reportWebVitals from './reportWebVitals';
+
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <LocalizationProvider dateAdapter={AdapterMoment}>
+    <TodoProvider>
+      <App />
+    </TodoProvider>
+    </LocalizationProvider>
   </React.StrictMode>
 );
 

@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+body{
+  font-family: 'Trebuchet MS', sans-serif
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:focus{
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todoHead{
+  background-color: #fdfdff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  border-bottom: solid 1px #e9eff5;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.todoHead__button{
+  position: absolute;
+  bottom: -28px;
+  right: 20px;
+  transition-duration: 300ms;
   color: white;
+  border: none;
+  border-radius: 180px;
+  padding: 10px 18px;
+  font-size: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
 }
 
-.App-link {
-  color: #61dafb;
+.todoItem{
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.todoItem__input{
+  margin: 0 0 0 15px;
+  font-size: 18px;
+  width: 100%;
+  border: none;
+}
+.todoItem__buttonDelete{
+  transform: rotate(45deg);
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: #999999;
+  font-weight: bold;
+}
+.todoItem__separator{
+  border: solid .5px #e9eff5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoErrorMessage{
+  font-size: 13px;
+  margin: 5px 0 0 15px;
+  color: #fa6768;
 }
